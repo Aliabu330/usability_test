@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Results</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        table{
+            width:100%;
+            border-collapse:collapse;
+            margin-bottom:20px;
+        }
+        th, td{
+            border: 1px solid #ccc;
+            padding: 8px;
+            text-align: left;
+        }
+        th{
+            background-color: white;
+        }
+        .dashboard {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom:  20px;
+        }
+        .dashboard_item {
+            width: 30%;
+            border: 1px solid #ccc;
+            padding: 16px;
+            box-sizing: border-box;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Survey Results</h1>
+    <div class="dashboard">
+        <div class="dashcoard_item">
+            <h2> {{total_responses}}</h2>
+            <p>Total Responses</p>
+        </div>
+
+        <div class="dashcoard_item">
+            <h2> {{average_age}}</h2>
+            <p>Average Age</p>
+        </div>
+
+        <div class="dashcoard_item">
+            <h2> {{unique_names}}</h2>
+            <p>Unique Names</p>
+        </div>
+
+
+    </div>
+
+    <table>
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>Alter</th>
+            <th>Geschlecht</th>
+            <th>Beruf</th>
+            <th>Einschränkung</th>
+            <th>D.Reifegrad</th>
+            <th>V.Reifegrad</th>
+            <th>VR-Brille</th>
+            <th>Software</th>
+            <th>Funktion</th>
+            <th>Ziel</th>
+            <th>F.1</th>
+            <th>F.2</th>
+            <th>F.3</th>
+            <th>F.4</th>
+            <th>F.5</th>
+            <th>F.6</th>
+            <th>F.7</th>
+            <th>F.8</th>
+            <th>F.9</th>
+            <th>F.10</th>
+            <th>F.11</th>
+            <th>F.12</th>
+            <th>F.13</th>
+            <th>F.14 </th>
+            <th>F.15 </th>
+            <th>F.16 </th>
+            <th>F.17 </th>
+            <th>F.18 </th>
+            <th>F.19 </th>
+            <th>F.20 </th>
+            <th>F.21 </th>
+            <th>F.22 </th>
+            <th>F.23 </th>
+            <th>F.24 </th>
+            <th>F.25 </th>
+            <th>F.26 </th>
+            <th>F.27 </th>
+            <th>F.28 </th>
+            <th>F.29 </th>
+            <th>F.30 </th>
+            <th>F.31 </th>
+            <th>F.32</th>
+            <th>F.33 </th>
+            <th>F.34 </th>
+            <th>F.35 </th>
+            <th>F.36 </th>
+            <th>F.37 </th>
+            <th>F.38 </th>
+            <th>F.39 </th>
+            <th>F.40 </th>
+            <th>F.41 </th>
+            <th>F.42 </th>
+            <th>F.43 </th>
+            <th>F.44 </th>
+            <th>F.45 </th>
+            <th>F.46 </th>
+            <th>F.47 </th>
+            <th>F.I </th>
+            <th>F.II </th>
+            <th>F.III </th>
+            <th>F.IV </th>
+            <th>F.V </th>
+            <th>F.VI </th>
+            <th>F.VII </th>
+            <th>F.VIII </th>
+            <th>F.IX </th>
+            <th>F.X </th>
+            <th>F.i </th>
+            <th>F.ii </th>
+            <th>F.iii </th>
+            <th>F.iv </th>
+            <th>F.v </th>
+            <th>F.vi </th>
+            <th>F.vii </th>
+            
+
+        </tr>
+        </thead>
+        <tbody>
+            {% for response in database %}
+                <tr>
+                    <td>{{ response.name }}</td>
+                    <td>{{ response.age }}</td>
+                    <td>{{ response.gender }}</td>
+                    <td>{{ response.job }}</td>
+                    <td>{{ response.limitation }}</td>
+                    <td>{{ response.digital }}</td>
+                    <td>{{ response.virtual }}</td>
+                    <td>{{ response.brille }}</td>
+                    <td>{{ response.software }}</td>
+                    <td>{{ response.funktionen }}</td>
+                    <td>{{ response.ziel }}</td>
+                    <td>{{ response.q_1 }}</td>
+                    <td>{{ response.q_2 }}</td>
+                    <td>{{ response.q_3 }}</td>
+                    <td>{{ response.q_4 }}</td>
+                    <td>{{ response.q_5 }}</td>
+                    <td>{{ response.q_6 }}</td>
+                    <td>{{ response.q_7 }}</td>
+                    <td>{{ response.q_8 }}</td>
+                    <td>{{ response.q_9 }}</td>
+                    <td>{{ response.q_10 }}</td>
+                    <td>{{ response.q_11 }}</td>
+                    <td>{{ response.q_12 }}</td>
+                    <td>{{ response.q_13 }}</td>
+                    <td>{{ response.q_14 }}</td>
+                    <td>{{ response.q_15 }}</td>
+                    <td>{{ response.q_16 }}</td>
+                    <td>{{ response.q_17 }}</td>
+                    <td>{{ response.q_18 }}</td>
+                    <td>{{ response.q_19 }}</td>
+                    <td>{{ response.q_20 }}</td>
+                    <td>{{ response.q_21 }}</td>
+                    <td>{{ response.q_22 }}</td>
+                    <td>{{ response.q_23 }}</td>
+                    <td>{{ response.q_24 }}</td>
+                    <td>{{ response.q_25 }}</td>
+                    <td>{{ response.q_26 }}</td>
+                    <td>{{ response.q_27 }}</td>
+                    <td>{{ response.q_28 }}</td>
+                    <td>{{ response.q_29 }}</td>
+                    <td>{{ response.q_30 }}</td>
+                    <td>{{ response.q_31 }}</td>
+                    <td>{{ response.q_32 }}</td>
+                    <td>{{ response.q_33 }}</td>
+                    <td>{{ response.q_34 }}</td>
+                    <td>{{ response.q_35 }}</td>
+                    <td>{{ response.q_36 }}</td>
+                    <td>{{ response.q_37 }}</td>
+                    <td>{{ response.q_38 }}</td>
+                    <td>{{ response.q_39 }}</td>
+                    <td>{{ response.q_40 }}</td>
+                    <td>{{ response.q_41 }}</td>
+                    <td>{{ response.q_42 }}</td>
+                    <td>{{ response.q_43 }}</td>
+                    <td>{{ response.q_44 }}</td>
+                    <td>{{ response.q_45 }}</td>
+                    <td>{{ response.q_46 }}</td>
+                    <td>{{ response.q_47 }}</td>
+                    <td>{{ response.q_48 }}</td>
+                    <td>{{ response.q_49 }}</td>
+                    <td>{{ response.q_50 }}</td>
+                    <td>{{ response.q_51 }}</td>
+                    <td>{{ response.q_52 }}</td>
+                    <td>{{ response.q_53 }}</td>
+                    <td>{{ response.q_54 }}</td>
+                    <td>{{ response.q_55 }}</td>
+                    <td>{{ response.q_56 }}</td>
+                    <td>{{ response.q_57 }}</td>
+                    <td>{{ response.q_58 }}</td>
+                    <td>{{ response.q_59 }}</td>
+                    <td>{{ response.q_60 }}</td>
+                    <td>{{ response.q_61 }}</td>
+                    <td>{{ response.q_62 }}</td>
+                    <td>{{ response.q_63 }}</td>
+                    <td>{{ response.q_64 }}</td>
+
+
+                </tr>
+            {% endfor %}
+
+        </tbody>
+    </table>
+    <table>
+
+</body>
+</html>
